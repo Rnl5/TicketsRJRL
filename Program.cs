@@ -9,6 +9,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+var ConStr = builder.Configuration.GetConnectionString("ConStr");
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
